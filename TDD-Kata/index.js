@@ -30,13 +30,16 @@ function testAddMultipleNumber(){
     // console.log(add("2,3,4,5"))
     console.assert(add("2,3,4,5")==14, "Test Failed ! Invalid Sum ")
 }
+
 function testNewLineDelimeter(){
     // console.log(add("2\n3,4"))
     console.assert(add("2\n3,4")==9, "Test Failed ! Invalid Sum ")
 }
+
 function testCustomDelimites(){
     console.assert(add("//~\n8~9")===17,`Test for Custom delimiters failed ${add("//~\n8~9")}`);
 }
+
 function testNegativeNums(){
     try{
         add("1,-1,2");
@@ -46,11 +49,19 @@ function testNegativeNums(){
     }
 }
 
+
+function runTests(){
+
+    testEmptyString()
+    testSingleNumber()
+    testAddTwoNumber()
+    testAddMultipleNumber()
+    testNewLineDelimeter()
+    testCustomDelimites()
+    testNegativeNums()
+
+    console.log("All Tests Passed ! ")
+}
+
 console.log("Working...")
-// testEmptyString()
-// testSingleNumber()
-// testAddTwoNumber()
-// testAddMultipleNumber()
-// testNewLineDelimeter()
-testCustomDelimites()
-testNegativeNums()
+runTests()
